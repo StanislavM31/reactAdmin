@@ -1,4 +1,4 @@
-console.log("hello admin");
+console.log("hello admin!");
 
 const url = "http://3.65.149.62/test-api/auth/login";
 const u = 'http://3.65.149.62/test-api/profile';
