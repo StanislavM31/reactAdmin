@@ -3,3 +3,71 @@
     margin: 0;
     box-sizing: border-box;
 }
+body {
+    background-color: #eff3f5;
+  }
+  .main {
+    width: 1200px;
+    height: 800px;
+    margin: 50px auto;
+    background-color: #ffff;
+    display: flex;
+  }
+  .icon {
+    height: 36px;
+    width: 36px;
+    background-image: url(./assets/waving-hand.svg);
+  }
+
+  .main-auth {
+    display: flex;
+    flex-direction: column;
+    padding-left: 100px;
+  }
+  h1 {
+    margin: 13px 0 13px 0;
+  }
+  form {
+    margin-top: 62px;
+  }
+  .title {
+    margin-bottom: 10px;
+    font-weight: 400;
+    font-size: 16px;
+  }
+  .pswrd {
+    margin-top: 30px;
+  }
+  input {
+    width: 440px;
+    height: 48px;
+    padding-left: 22px;
+    background: #ecf2f7;
+    border-radius: 4px;
+    border: none;
+    /*   flex: none;
+    order: 1;
+    flex-grow: 0; */
+  }
+  .btn {
+    color: #ffff;
+    padding: 12px 190px 12px 190px;
+  }
+  button{
+    margin-top: 44px;
+    height: 54px;
+    border: none;
+    background: #4c70ff;
+    border-radius: 8px;
+  }
+  .text {
+    margin: 19px 0 0 0;
+    font-weight: 500;
+  }
+  p > span {
+    color: #66bce8;
+  }
+  a {
+    color: #66bce8;
+    text-decoration: none;
+  }
