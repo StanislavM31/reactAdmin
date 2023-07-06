@@ -1,7 +1,8 @@
 console.log("hello admin!");
 
 const url = "http://3.65.149.62/test-api/auth/login";
-const u = 'http://3.65.149.62/test-api/profile';
+const urlGetContact= 'http://3.65.149.62/test-api/contacts';
+let jwt;
 
 async function authorization(link){
   let data = {
@@ -16,16 +17,26 @@ async function authorization(link){
     },
     body: JSON.stringify(data)
   });
+  let result = await response.json();
+  sessionStorage.setItem('res', result.accessToken);
+  console.log( sessionStorage.getItem("res"));
+}
+
+async function getContact(token){
+  let response = await fetch(urlGetContact, {
+    method: 'GET',
+    headers: {
+      'Content-Type': 'application/json',
+      "Authorization": `Bearer ${token}`
+    }
+  });
 
   let result = await response.json();
   console.log(result);
-  console.log(`accessToken: ${result.accessToken}`);
-  console.log(`refreshToken: ${result.refreshToken}`);
-  console.log(result.user);
+
 }
-
-authorization(url);
-
+let promise1 = getContact(authorization(url));
+let promise2 = (getContact(sessionStorage.getItem("res")));
 
 
 
